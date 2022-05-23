@@ -3,3 +3,6 @@
 
 *.exe
 GoViolin
+goviolin
+go.mod
+go.sum
