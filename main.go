@@ -43,7 +43,7 @@ func main() {
 	// this code below makes a file server and serves everything as a file
 	// fs := http.FileServer(http.Dir(""))
 	// http.Handle("/", fs)
-
+	fmt.Println("hello world hackers")
 	// serve everything in the css folder, the img folder and mp3 folder as a file
 	http.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("css"))))
 	http.Handle("/img/", http.StripPrefix("/img/", http.FileServer(http.Dir("img"))))
@@ -59,14 +59,14 @@ func main() {
 
 }
 
-// Detect $PORT and if present uses it for listen and serve else defaults to :8080
+// Detect $PORT and if present uses it for listen and serve else defaults to :8081
 // This is so that app can run on Heroku
 func getPort() string {
 	p := os.Getenv("PORT")
 	if p != "" {
 		return ":" + p
 	}
-	return ":8080"
+	return ":8081"
 }
 
 func render(w http.ResponseWriter, tmpl string, pageVars PageVars) {
