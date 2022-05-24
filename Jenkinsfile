@@ -1,5 +1,10 @@
 pipeline {
     agent any
+
+	environment {
+		DOCKERHUB_CREDENTIALS=credentials('docker-hub')
+	}
+
     tools {
         go '1.18.2'
     }
@@ -17,10 +22,28 @@ pipeline {
 
             }
         }
+        stage('Login') {
+
+			steps {
+				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+			}
+		}
+        stage('Push') {
+
+			steps {
+				sh 'docker push thetips4you/nodeapp_test:latest'
+			}
+		}
+
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
             }
         }
     }
+    post {
+		always {
+			sh 'docker logout'
+		}
+	}
 }

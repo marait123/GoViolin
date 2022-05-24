@@ -27,6 +27,11 @@ Contains:
 - stop the violin container
 `docker stop violin_cont`
 
+- push image to registry
+
+    `docker tag violin marait123/violin`
+
+    `docker push marait123/violin`
 ## common pipeline issues
 - allow jenkins to use docker
 `sudo usermod -a -G docker jenkins`
