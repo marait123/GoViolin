@@ -43,7 +43,7 @@ func main() {
 	// this code below makes a file server and serves everything as a file
 	// fs := http.FileServer(http.Dir(""))
 	// http.Handle("/", fs)
-	fmt.Println("hello world hackers")
+	fmt.Println("hello world hackers - small change")
 	// serve everything in the css folder, the img folder and mp3 folder as a file
 	http.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("css"))))
 	http.Handle("/img/", http.StripPrefix("/img/", http.FileServer(http.Dir("img"))))
