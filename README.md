@@ -24,6 +24,7 @@ Contains:
     |--- service.yaml # the file that describes the kubernetes service 
 
 # how to run with docker
+in the dockerfile i used multistage docker to reduce the final image size
 - [dockerhub-image-link](https://hub.docker.com/repository/docker/marait123/violin)
 - remove the image
 `docker rmi violin`
