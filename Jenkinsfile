@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                docker build --tag violin .
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                go test
             }
         }
         stage('Deploy') {
