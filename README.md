@@ -22,6 +22,7 @@ Contains:
     |--- service.yaml # the file that describes the kubernetes service 
 
 # how to run with docker
+- [dockerhub-image-link](https://hub.docker.com/repository/docker/marait123/violin)
 - remove the image
 `docker rmi violin`
 - build the image
@@ -48,7 +49,7 @@ Contains:
     2. testing stage to test the app
     3. push stage is where app is push to the registery 
     4. deploy stage is left as place holder but the deployment should go here but I did it alone as written in the requirement you can see it below in kubernetes section
-    
+
 - running of jenkins pipeline
 ![jenkins-pipe](./images/jenkins-stages.png)
 - docker image on dockerhub after running of jenkins pipeline
