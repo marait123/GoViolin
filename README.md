@@ -69,7 +69,8 @@ Contains:
 - vmware is needed to create the 
 - kubectl to interact with the kubernetes master
 ## how to run the app in kubernetes
-- 
+- run `kubectl apply -f deployment.yaml` to create the deployment
+- run `kubectl apply -f service.yaml` to create the kubernetes service
 
 ## notes
 - in case you want to  get the yaml files of
