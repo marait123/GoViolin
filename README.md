@@ -27,7 +27,9 @@ Contains:
 - stop the violin container
 `docker stop violin_cont`
 
-
+## common pipeline issues
+- allow jenkins to use docker
+`sudo usermod -a -G docker jenkins`
 
 
 

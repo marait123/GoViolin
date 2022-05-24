@@ -8,7 +8,7 @@ WORKDIR /goviolin
 COPY . .
 
 # creating go.mod file
-RUN rm go.mod go.sum
+RUN rm -f go.mod go.sum
 RUN go mod init violin && go mod tidy && go mod vendor
 
 # for go modules
