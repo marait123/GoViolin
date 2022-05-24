@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2022-05-24T17:51:06Z"
+  labels:
+    app: violin-deploy
+  name: violin-deploy
+  namespace: default
+  resourceVersion: "6202"
+  uid: cfebcb2e-88b8-47ee-9571-3605d8dfffc0
+spec:
+  allocateLoadBalancerNodePorts: true
+  clusterIP: 10.104.39.4
+  clusterIPs:
+  - 10.104.39.4
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - nodePort: 31492
+    port: 8081
+    protocol: TCP
+    targetPort: 8081
+  selector:
+    app: violin-deploy
+  sessionAffinity: None
+  type: LoadBalancer
+status:
+  loadBalancer: {}
