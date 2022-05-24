@@ -17,6 +17,8 @@ Contains:
 
     |--- Jenkinsfile # the file used by jenkins to create the pipeline , the pipeline is actually on machine is polling scm every 1 minute
 
+    |-- example_out_jenkins_pass.txt --> this is the output of one successful build of jenkins pipeline
+
     |--- deployemnt.yaml # the file that describes kubernetes deployment scaled to 3 pods
 
     |--- service.yaml # the file that describes the kubernetes service 
