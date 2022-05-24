@@ -50,6 +50,7 @@ in the dockerfile i used multistage docker to reduce the final image size
 - the jenkins file has a number of stages the most important are
     1. build stage to build the app and also the image
     2. testing stage to test the app
+    ![jenkins-testing](./images/jenkins-testing-out.png)
     3. push stage is where app is push to the registery 
     4. deploy stage is left as place holder but the deployment should go here but I did it alone as written in the requirement you can see it below in kubernetes section
 
