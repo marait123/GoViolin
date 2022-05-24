@@ -84,5 +84,5 @@ in the dockerfile i used multistage docker to reduce the final image size
 # how to access the app
 - firstly get the app ip
 ![app-ip-minikube](./images/app-ip.png)
-- type the you get in the browser and you should get 
+- type the ip you got in previous step in the browser and you should get 
 ![app-main-page](./images/app-main-page.png)
