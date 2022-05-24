@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'docker build --tag violin .'
+                sh 'docker build --tag marait123/violin:latest .'
                 sh 'rm -f go.mod go.sum'
                 sh 'go mod init violin && go mod tidy && go mod vendor'
             }
@@ -31,7 +31,7 @@ pipeline {
         stage('Push') {
 
 			steps {
-				sh 'docker push thetips4you/nodeapp_test:latest'
+				sh 'docker push marait123/violin:latest'
 			}
 		}
 
