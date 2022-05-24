@@ -20,7 +20,7 @@ RUN export CGO_ENABLED=0
 RUN go build -o goviolin .
 
 
-FROM alpine
+FROM alpine:latest
 
 COPY --from=build-env /goviolin /goviolin
 
