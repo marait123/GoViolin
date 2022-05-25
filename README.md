@@ -52,7 +52,7 @@ in the dockerfile i used multistage docker to reduce the final image size
     2. testing stage to test the app
     ![jenkins-testing](./images/jenkins-testing-out.png)
     3. push stage is where app is push to the registery 
-    4. deploy stage is left as place holder but the deployment should go here but I did it alone as written in the requirement you can see it below in kubernetes section
+    4. deploy stage is left as placeholder but the deployment should go here but I did it alone as written in the requirement you can see it below in kubernetes section
 
 - running of jenkins pipeline
 ![jenkins-pipe](./images/jenkins-stages.png)
